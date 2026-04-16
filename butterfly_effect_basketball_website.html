@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butterfly Effect Basketball | In-Person Basketball Training</title>
+  <meta name="description" content="Butterfly Effect Basketball provides in-person basketball training focused on ball handling, shooting, footwork, finishing, decision-making, and confidence under pressure." />
+  <meta name="keywords" content="basketball training, basketball trainer, group basketball training, private basketball training, Butterfly Effect Basketball, Charles Norman" />
+  <meta name="author" content="Charles Norman" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Butterfly Effect Basketball" />
+  <meta property="og:description" content="In-person basketball training focused on real game performance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://butterflyeffectbasketball.com" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --bg2: #111216;
+      --panel: #17171b;
+      --text: #f5f7fb;
+      --muted: #b8c0cc;
+      --line: #2b2f38;
+      --accent: #f2c94c;
+      --accent-dark: #d7af35;
+      --max: 1120px;
+      --radius: 18px;
+      --shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 13, 15, 0.94);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: #465061;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(242, 201, 76, 0.12);
+      color: #f7d978;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.1rem;
+    }
+
+    .hero p,
+    .section-copy,
+    .card p,
+    .pricing-card li {
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .card,
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card,
+    .service-card,
+    .pricing-card,
+    .contact-card {
+      padding: 1.25rem;
+    }
+
+    .hero-list,
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .hero-list li,
+    .contact-list li {
+      padding: 0.8rem 1rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .section {
+      padding: 2.75rem 0;
+    }
+
+    .services-grid,
+    .pricing-grid,
+    .contact-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-banner {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(242, 201, 76, 0.16), rgba(242, 201, 76, 0.05));
+      border: 1px solid rgba(242, 201, 76, 0.25);
+    }
+
+    .offer-banner strong,
+    .tag {
+      display: inline-block;
+      font-weight: 800;
+    }
+
+    .tag {
+      width: fit-content;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      background: rgba(242, 201, 76, 0.16);
+      color: #f7d978;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      min-height: 100%;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(242, 201, 76, 0.35);
+      background: linear-gradient(180deg, rgba(242, 201, 76, 0.09), rgba(255, 255, 255, 0.02));
+    }
+
+    .price-lines {
+      display: grid;
+      gap: 0.4rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .pricing-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .pricing-card .btn {
+      margin-top: auto;
+    }
+
+    .contact-card a {
+      color: #f7d978;
+      font-weight: 600;
+    }
+
+    .cta-box {
+      margin-top: 1rem;
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .services-grid,
+      .pricing-grid,
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 4rem;
+      }
+
+      .hero-grid,
+      .services-grid,
+      .pricing-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Butterfly Effect Basketball",
+    "description": "In-person basketball training focused on ball handling, shooting, footwork, finishing, decision-making, and confidence under pressure.",
+    "email": "chas3norman@hotmail.com",
+    "telephone": "+1-909-573-4137",
+    "url": "https://butterflyeffectbasketball.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Charles Norman"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": "https://calendly.com/chas3norman/1-hour-group-training"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#top" class="brand">Butterfly Effect Basketball</a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">In-Person Basketball Training</span>
+          <h1>Train Skills That Actually Show Up in Games</h1>
+          <p>Improve footwork, finishing, shooting, ball handling, decision-making, and confidence with local in-person training from Butterfly Effect Basketball.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Book Free Evaluation</a>
+            <a class="btn btn-secondary" href="tel:+19095734137">Call (909) 573-4137</a>
+            <a class="btn btn-secondary" href="mailto:chas3norman@hotmail.com">Email Us</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Highlights">
+          <h2>Train for Real Game Performance</h2>
+          <ul class="hero-list">
+            <li>Small group training built around pressure, reaction, and decision-making</li>
+            <li>Private 1-on-1 sessions for personalized development</li>
+            <li>Free 20-minute evaluation to identify the best fit</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Butterfly Effect Basketball</h2>
+        <p class="section-copy">My name is Charles Norman, and after years of training athletes and refereeing high-level basketball, I have seen a common problem: talented players often struggle to perform in games the same way they perform in workouts. At Butterfly Effect Basketball, I help athletes make small adjustments to the way they train and mentally approach the game so their work translates into in-game performance.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>What I Train</h2>
+        <p class="section-copy">Training is designed to help athletes build skill, control, confidence, and better decisions under pressure.</p>
+        <div class="services-grid">
+          <article class="card service-card">
+            <h3>Ball Handling</h3>
+            <p>Ball handling under pressure with better control, timing, and reaction.</p>
+          </article>
+          <article class="card service-card">
+            <h3>Finishing</h3>
+            <p>Game-speed finishing against realistic pressure and angles.</p>
+          </article>
+          <article class="card service-card">
+            <h3>Shooting</h3>
+            <p>Shooting mechanics, shot creation, and control when speed increases.</p>
+          </article>
+          <article class="card service-card">
+            <h3>Footwork</h3>
+            <p>Footwork and balance for better movement, control, and efficiency.</p>
+          </article>
+          <article class="card service-card">
+            <h3>Decision-Making</h3>
+            <p>Reaction training and faster reads in live situations.</p>
+          </article>
+          <article class="card service-card">
+            <h3>Confidence</h3>
+            <p>Confidence and composure training so skills show up in games.</p>
+          </article>
+        </div>
+        <div class="offer-banner">
+          <strong>Start With a Free Evaluation Workout</strong>
+          <p>New athletes can book a free 20-minute evaluation session. I will assess strengths, identify the biggest areas for improvement, and show you exactly which training package fits best.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section">
+      <div class="container">
+        <h2>Training Options</h2>
+        <p class="section-copy">All group packages are designed to simulate real game environments, decision-making, and pressure situations.</p>
+        <div class="pricing-grid">
+          <article class="card pricing-card">
+            <span class="tag">Group Training</span>
+            <h3>Caterpillar</h3>
+            <p>For players building fundamentals in a structured group setting.</p>
+            <div class="price-lines">
+              <span>2x/week: $232/month</span>
+              <span>3x/week: $334/month</span>
+              <span>Drop-in session: $45</span>
+            </div>
+            <ul>
+              <li>Fundamentals-focused group sessions</li>
+              <li>Structured repetition and skill development</li>
+              <li>Built for growing confidence and control</li>
+            </ul>
+            <a class="btn btn-secondary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Join a Group</a>
+          </article>
+
+          <article class="card pricing-card">
+            <span class="tag">Group Training</span>
+            <h3>Cocoon</h3>
+            <p>For players ready to transform practice skills into game results through competitive group training.</p>
+            <div class="price-lines">
+              <span>2x/week: $232/month</span>
+              <span>3x/week: $334/month</span>
+              <span>Drop-in session: $45</span>
+            </div>
+            <ul>
+              <li>Pressure-based training environment</li>
+              <li>Decision-making and live reaction work</li>
+              <li>Built for game transfer and composure</li>
+            </ul>
+            <a class="btn btn-secondary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Join a Group</a>
+          </article>
+
+          <article class="card pricing-card featured">
+            <span class="tag">Group Training</span>
+            <h3>Butterfly</h3>
+            <p>For serious athletes who want advanced, high-intensity group training and accountability.</p>
+            <div class="price-lines">
+              <span>2x/week: $312/month</span>
+              <span>3x/week: $449/month</span>
+              <span>Drop-in session: $50</span>
+            </div>
+            <ul>
+              <li>High-intensity advanced group training</li>
+              <li>Competitive accountability</li>
+              <li>AthleticSOS sold separately</li>
+            </ul>
+            <a class="btn btn-primary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Book Butterfly</a>
+          </article>
+
+          <article class="card pricing-card">
+            <span class="tag">Private Training</span>
+            <h3>1-on-1 Training</h3>
+            <p>For athletes who want personalized attention and faster skill development.</p>
+            <div class="price-lines">
+              <span>Single session: $50/hour</span>
+              <span>4-session pack: $160 ($40/session)</span>
+            </div>
+            <ul>
+              <li>Personalized coaching</li>
+              <li>Focused correction and feedback</li>
+              <li>Built for faster individual progress</li>
+            </ul>
+            <a class="btn btn-secondary" href="mailto:chas3norman@hotmail.com?subject=Private%20Training%20Inquiry">Ask About 1-on-1</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Book or Contact Us</h2>
+        <p class="section-copy">Ready to get started? Book your session, call directly, or send a message.</p>
+        <div class="contact-grid">
+          <article class="card contact-card">
+            <h3>Book a Session</h3>
+            <p>Use the booking link to reserve your free evaluation or group training session.</p>
+            <div class="cta-box">
+              <a class="btn btn-primary" href="https://calendly.com/chas3norman/1-hour-group-training" target="_blank" rel="noopener noreferrer">Book on Calendly</a>
+            </div>
+          </article>
+          <article class="card contact-card">
+            <h3>Contact Information</h3>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> <a href="tel:+19095734137">(909) 573 - 4137</a></li>
+              <li><strong>Email:</strong> <a href="mailto:chas3norman@hotmail.com">chas3norman@hotmail.com</a></li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="tel:+19095734137">Call Now</a>
+              <a class="btn btn-secondary" href="mailto:chas3norman@hotmail.com">Send Email</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-line">
+      <span>&copy; 2026 Butterfly Effect Basketball</span>
+      <span>Built for speed, local search, and easy booking.</span>
+    </div>
+  </footer>
+</body>
+</html>
